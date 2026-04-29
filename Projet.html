@@ -1,326 +1,428 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <link rel="shortcut icon" href="images/favicon.png" type="">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projets | Matéo Ramet — Game Designer</title>
+  <meta name="description"
+    content="Tous les projets de Matéo Ramet : Game Design (Artefacts Studio, Eternal Wounds), BTS SIO (La Gourmetise, Projet Discovery) et stages HASLER Group. Cliquez pour voir les détails de chaque projet.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/subpage.css">
+  <style>
+    /* ===== Category label pill ===== */
+    .cat-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.73rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.9rem;
+      border-radius: 100px;
+      margin-bottom: 1.75rem;
+    }
 
-  <title> About_me </title>
+    .cat-game {
+      color: var(--accent-light);
+      background: rgba(168, 85, 247, 0.1);
+      border: 1px solid rgba(168, 85, 247, 0.3);
+    }
 
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    .cat-bts {
+      color: var(--cyan);
+      background: rgba(6, 182, 212, 0.1);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+    }
 
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    .cat-hasler {
+      color: #f59e0b;
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
 
-  <!--owl slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    /* ===== Horizontal project card ===== */
+    .proj-card {
+      display: flex;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+      transition: var(--transition);
+    }
 
-  <!-- font awesome style -->
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
+    .proj-card:hover {
+      border-color: var(--border-hover);
+      box-shadow: var(--shadow-glow);
+    }
 
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="css/Footer.css" media="all">
-  <link rel="stylesheet" type="text/css" href="css/Réalisation_Pro.css" media="all">
+    .proj-img {
+      width: 270px;
+      flex-shrink: 0;
+      overflow: hidden;
+      position: relative;
+    }
 
+    .proj-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+
+    .proj-card:hover .proj-img img {
+      transform: scale(1.06);
+    }
+
+    .proj-body {
+      padding: 1.75rem 2rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .proj-body h3 {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.03em;
+      line-height: 1.3;
+    }
+
+    .proj-body p {
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      line-height: 1.72;
+      margin-bottom: 0.75rem;
+      flex: 1;
+    }
+
+    .proj-tags-row {
+      display: flex;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+
+    .proj-footer {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .proj-tool-imgs {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .proj-tool-imgs img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+      opacity: 0.75;
+      transition: opacity 0.2s;
+    }
+
+    .proj-tool-imgs img:hover {
+      opacity: 1;
+    }
+
+    /* ===== Section separator ===== */
+    .cat-section {
+      margin-bottom: 3.5rem;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 720px) {
+      .proj-card {
+        flex-direction: column;
+      }
+
+      .proj-img {
+        width: 100%;
+        height: 200px;
+      }
+    }
+  </style>
 </head>
 
-<body class="sub_page">
+<body>
 
-  <div class="hero_area">
-
-    <div class="hero_bg_box">
-      <div class="bg_img_box">
-        <img src="images/hero-bg.png" alt="">
-      </div>
-    </div>
-
-<!-- header section strats -->
-<header class="header_section">
-  <div class="container-fluid">
-    <nav class="navbar navbar-expand-lg custom_nav-container ">
-      <a class="navbar-brand" href="index.html">
-        <span>
-          Portfolio
-        </span>
-      </a>
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class=""> </span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav  ">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="stage.html">Stages</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Projet.html">Projet</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Veille.html">Veille Technologique</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Curriculum vitae.html">Curriculum vitae</a>
-          </li>
-          </form>
-        </ul>
-      </div>
+  <!-- Header -->
+  <header class="sp-header">
+    <a href="index.html" class="sp-logo">Matéo<span>.</span></a>
+    <i class="bx bx-menu sp-menu-btn" id="sp-menu-btn"></i>
+    <nav class="sp-nav" id="sp-nav">
+      <a href="index.html">Accueil</a>
+      <a href="Moi.html">À Propos</a>
+      <a href="Projet.html" class="active">Projets</a>
+      <a href="stage.html">Stage BTS</a>
+      <a href="Veille.html">Veille Techno</a>
+      <a href="Curriculum vitae.html">Curriculum Vitae</a>
     </nav>
+  </header>
+
+  <!-- Banner -->
+  <div class="page-banner">
+    <p class="page-banner-breadcrumb">
+      <a href="index.html">Accueil</a><span>/</span> Projets
+    </p>
+    <h1>Tous mes <span class="accent">Projets</span></h1>
+    <p>Game Design · Développement · Réalisations scolaires &amp; profesionnelles</p>
   </div>
-</header>
-<!-- end header section -->
 
-  <!-- Projet section -->
-<!-- Bannière de projet pro -->
-<span style="color: white;">
-  <section class="Presentation">
-    <section class="Titre">
-        <h1 class="Titre2"> Réalisations <wbr> Professionnelles <br></h1>
-        <hr class="HRnormal">
-        <h1 class="Titre3"> Tous mes projets réalisés au travail et à l'école (BTS) et personnel</h1>
-    </section>
-    <section class="IMG_Etudiant">
-        <img src="images/Project.png" alt="IMG_Etudiant_Informatique" width="350px">
-    </section>
-  </section>
-</span>
+  <!-- Main -->
+  <main class="sp-main">
+    <a href="index.html" class="sp-back-btn"><i class='bx bx-arrow-back'></i> Retour au portfolio</a>
 
-
-<!-- Tous les projets -->
-<section class="Projets">
-
-  <!-- ECOLE -->
-  <section class="Ecole">
-    <article class="Titre_pro">
-      <p>A l'école et personnel</p>
-    </article>
-
-    <article class="articles">
-      <a href="La_Gourmetise.html" class="liens">
-        <div class="card">
-          <div class="card-header">
-            <img src="images/Site.png" alt="Télétravail" width="100" height="100" /> <!-- Ajustez la taille selon vos besoins -->
-          </div>
-          <div class="card-body">
-            <h3 class="titre_card">
-              Développement d'un site web et d'une application mobile <br>(La Gourmetise)
-            </h3>
-            <div class="images-container">
-              <img src="images/Visual-Studio-Code-VSCode-hW9wsc.png" alt="" width="50" height="50" />
-              <img src="images/Android_Studio_Logo_(2023).svg.png" alt="" width="50" height="50" />
-              <img src="images/trello-logo.png" alt="" width="50" height="50" />
-              <img src="images/laragon7302.jpg" alt="" width="50" height="50" />
-              <img src="images/GitHub_Invertocat_Logo.svg" alt="" width="50" height="50" />
-              <img src="images/mysql.png" alt="" width="50" height="50" />
-            </div>
-
-          </div>
-        </div>
-      </a>
-    </article>
-    
-
-    <article class="articles">
-      <a href="" class="liens">
-        <div class="card">
-          <div class="card-header">
-            <img src="images/projet_game.png" alt="ordinateur_portable" />
-          </div>
-          <div class="card-body">
-            <h3 class="titre_card">
-              Dévelopement d'un jeu vidéo<br>(Projet Discovery)
-            </h3>
-            <div class="images-container">
-              <img src="images/unrealengine.svg" alt="" width="50" height="50" />
-              <img src="images/FL-Studio-12-Logo.png" alt="" width="50" height="50" />
-              <img src="images/Blender_logo_no_text.svg.png" alt="" width="50" height="50" />
-              <img src="images/ibis-paint-x-xfj-dK.png" alt="" width="50" height="50" />
-              <img src="images/lc-logo.png" alt="" width="50" height="50" />
-            </div>
-          </div>
-      </a>
-    </article>  
-
-   
-
-
-    <br><br>
-  </section>
-  <!-- ENTREPRISE -->
-  <section class="Entreprise">
-    <article class="Titre_pro">
-      <p>En entreprise</p>
-    </article>
-
-    <!-- article -->
-    <article class="articles">
-      <a href="Mission.html" class="liens">
-        <div class="card">
-          <div class="card-header">
-            <img src="images/table.png" alt="Ticketing" />
-          </div>
-          <div class="card-body">
-            <h3 class="titre_card">
-              Table Communication (1er stage)
-            </h3>
-            <div class="images-container">
-              <img src="images/windev_lgo.jpg" alt="" width="50" height="50" />
-            </div>
-          </div>
-          </div>
-      </a>
-    </article>
-
-    <article class="articles">
-      <a href="Mission.html" class="liens">
-        <div class="card">
-          <div class="card-header">
-            <img src="images/PSF.png" alt="Serveur vocal interactif (SVI)" />
-          </div>
-          <div class="card-body">
-            <h3 class="titre_card">
-              Convertion Tableau Excel à Fichier PSF (2eme stage)
-            </h3>
-            <div class="images-container">
-              <img src="images/windev_lgo.jpg" alt="" width="50" height="50" />
-              <img src="images/Microsoft_Office_Excel_(2019–present).svg.png" alt="" width="50" height="50" />
-            </div>
-          </div>
-      </a>
-    </article>
-
-   
-
-  </section>
-</section>
-
-
-<!-- Scroll Up -->
-<script src="js/Scroll_Up.js"></script>
-<button onclick="topFunction()" id="myBtn" title="Go to top"></button>
-
-<!-- Footer -->
-
-
-
-<!----Custom JS File--->
-<script src="js/Header.js"></script>
-<script src="js/MessageRetour.js"></script>
-</body>
-
-</html>
-<!-- info section -->
-
-<section class="info_section layout_padding2">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-lg-3 info_col">
-        <div class="info_contact">
-          <h4>
-            Address
-          </h4>
-          <div class="contact_link_box">  
-            </a>
-            <a href="">
-              <i class="fa fa-phone" aria-hidden="true"></i>
-              <span>
-               +07 83 66 54 72
-              </span>
-            </a>
-            <a href="">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-              <span>
-                rametmateo@gmail.com
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="info_social">
-          <a href="https://www.linkedin.com/in/matéo-ramet-037a4128b/">
-            <i class="fa fa-linkedin" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.instagram.com/mateo.rt_duke/?next=%2F">
-            <i class="fa fa-instagram" aria-hidden="true"></i>
-          </a>
-        </div>
+    <!-- ========================================
+         CATÉGORIE 1 — GAME DESIGN (Gamagora)
+    ========================================= -->
+    <div class="cat-section">
+      <div class="cat-label cat-game sp-animate">
+        <i class='bx bx-joystick'></i> Game Design — Gamagora Lyon
       </div>
-      <div class="col-md-6 col-lg-3 info_col">
-      </div>
-      <div class="col-md-6 col-lg-2 mx-auto info_col">
-        <div class="info_link_box">
-          <h4>
-            Links
-          </h4>
-          <div class="info_links">
-            <a class="active" href="index.html">
-              Home
-            </a>
-            <a class="" href="stage.html">
-              Stages
-            </a>
-            <a class="" href="Projet.html">
-              Projet
-            </a>
-            <a class="" href="Veille.html">
-              Veille Technologique
-            </a>
-            <a class="" href="Curriculum vitae.html">
-              Curriculum vitae
+
+      <!-- Artefacts Studio -->
+      <div class="proj-card sp-animate">
+        <div class="proj-img">
+          <img src="images/UE5.jpg" alt="Stage Game Designer — Artefacts Studio">
+        </div>
+        <div class="proj-body">
+          <h3>Stage Game Designer <span class="accent">·</span> Artefacts Studio</h3>
+          <p>
+            Stage de fin de Licence Level Design (Juin – Septembre 2025) au sein d'<strong>Artefacts Studio</strong>.
+            J'ai travaillé en tant que Game Designer sur un <strong>jeu de course</strong>, en me concentrant
+            principalement sur le <strong>Track Design</strong> : conception, mise en forme et itération des circuits
+            sous Unreal Engine 5.
+          </p>
+          <div class="proj-tags-row">
+            <span class="sp-tag">Track Design</span>
+            <span class="sp-tag">Unreal Engine 5</span>
+            <span class="sp-tag">Racing</span>
+            <span class="sp-tag">Stage Gamagora</span>
+          </div>
+          <div class="proj-footer">
+            <div class="proj-tool-imgs">
+              <img src="images/unrealengine.svg" alt="Unreal Engine" title="Unreal Engine 5">
+            </div>
+            <a href="projet-artefacts.html" class="sp-article-link">
+              <i class='bx bx-link-external'></i> Voir le détail
             </a>
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-lg-3 info_col ">
+
+      <!-- Eternal Wounds -->
+      <div class="proj-card sp-animate">
+        <div class="proj-img">
+          <img src="images/EternalWounds.png" alt="Eternal Wounds — Vertical Slice Gamagora">
+        </div>
+        <div class="proj-body">
+          <h3>Eternal Wounds <span class="accent">·</span> Vertical Slice Gamagora</h3>
+          <p>
+            Projet collectif multi-filières (Janvier – Avril 2025) réalisé en étroite collaboration avec
+            les autres parcours de la filière Gamagora (programmeurs, artistes, sound designers).
+            Vertical slice d'un jeu de type <strong>Puzzle / Action</strong>.
+          </p>
+          <p>
+            Mes rôles : <strong>Conception Level (Puzzle)</strong> — design et construction des niveaux —
+            et <strong>Feature Gameplay</strong> — spécification et test de mécaniques de jeu.
+          </p>
+          <div class="proj-tags-row">
+            <span class="sp-tag">Level Design</span>
+            <span class="sp-tag">Puzzle</span>
+            <span class="sp-tag">Feature Gameplay</span>
+            <span class="sp-tag">Collaboration multi-filières</span>
+            <span class="sp-tag">Gamagora</span>
+          </div>
+          <div class="proj-footer">
+            <a href="projet-eternal-wounds.html" class="sp-article-link">
+              <i class='bx bx-link-external'></i> Voir le détail
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- end info section -->
+    <div class="sp-divider"></div>
 
-  <!-- footer section -->
-  <section class="footer_section">
-    <div class="container">
-      <p>
-         <span id="displayYear"></span> © PortFolio RAMET Matéo 2023-2024. 
-        
-      </p>
+    <!-- ========================================
+         CATÉGORIE 2 — BTS SIO — À L'ÉCOLE
+    ========================================= -->
+    <div class="cat-section">
+      <div class="cat-label cat-bts sp-animate">
+        <i class='bx bx-desktop'></i> BTS SIO SLAM — Projets scolaires &amp; personnels
+      </div>
+
+      <!-- La Gourmetise -->
+      <div class="proj-card sp-animate">
+        <div class="proj-img">
+          <img src="images/Site.png" alt="La Gourmetise — Site web et application mobile">
+        </div>
+        <div class="proj-body">
+          <h3>La Gourmetise <span class="accent">·</span> Site Web &amp; Application Mobile</h3>
+          <p>
+            Développement complet d'un site web et d'une application mobile Android pour <strong>La Gourmetise</strong>,
+            une entreprise de restauration fictive. Projet réalisé dans le cadre du BTS SIO.
+          </p>
+          <p>
+            Stack technique : <strong>PHP / Laravel</strong> (back-end), <strong>Android Studio</strong> (app),
+            <strong>MySQL</strong> (base de données), <strong>GitHub</strong> (versioning).
+          </p>
+          <div class="proj-tags-row">
+            <span class="sp-tag">PHP / Laravel</span>
+            <span class="sp-tag">Android Studio</span>
+            <span class="sp-tag">MySQL</span>
+            <span class="sp-tag">GitHub</span>
+            <span class="sp-tag">Site Web</span>
+            <span class="sp-tag">App Mobile</span>
+          </div>
+          <div class="proj-footer">
+            <div class="proj-tool-imgs">
+              <img src="images/Visual-Studio-Code-VSCode-hW9wsc.png" alt="VSCode" title="VS Code">
+              <img src="images/Android_Studio_Logo_(2023).svg.png" alt="Android Studio" title="Android Studio">
+              <img src="images/mysql.png" alt="MySQL" title="MySQL">
+              <img src="images/GitHub_Invertocat_Logo.svg" alt="GitHub" title="GitHub">
+              <img src="images/trello-logo.png" alt="Trello" title="Trello">
+            </div>
+            <a href="projet-gourmetise.html" class="sp-article-link">
+              <i class='bx bx-link-external'></i> Voir le détail
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet Discovery / jeu vidéo personnel -->
+      <div class="proj-card sp-animate">
+        <div class="proj-img">
+          <img src="images/projet_game.png" alt="Projet Discovery — Jeu vidéo personnel">
+        </div>
+        <div class="proj-body">
+          <h3>Projet Discovery <span class="accent">·</span> Jeu Vidéo Personnel</h3>
+          <p>
+            Développement d'un jeu vidéo personnel réalisé en parallèle du BTS SIO. Projet alliant
+            conception de jeu, modélisation 3D avec <strong>Blender</strong>, création sonore avec
+            <strong>FL Studio</strong> et développement sous <strong>Unreal Engine</strong>.
+          </p>
+          <div class="proj-tags-row">
+            <span class="sp-tag">Unreal Engine</span>
+            <span class="sp-tag">Blender</span>
+            <span class="sp-tag">FL Studio</span>
+            <span class="sp-tag">Game Design</span>
+            <span class="sp-tag">Modélisation 3D</span>
+          </div>
+          <div class="proj-footer">
+            <div class="proj-tool-imgs">
+              <img src="images/unrealengine.svg" alt="Unreal Engine" title="Unreal Engine">
+              <img src="images/Blender_logo_no_text.svg.png" alt="Blender" title="Blender">
+              <img src="images/FL-Studio-12-Logo.png" alt="FL Studio" title="FL Studio">
+              <img src="images/ibis-paint-x-xfj-dK.png" alt="Ibis Paint" title="Ibis Paint X">
+            </div>
+            <a href="projet-discovery.html" class="sp-article-link">
+              <i class='bx bx-link-external'></i> Voir le détail
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
-  <!-- footer section -->
 
-  <!-- jQery -->
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <!-- popper js -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
-  <!-- bootstrap js -->
-  <script type="text/javascript" src="js/bootstrap.js"></script>
-  <!-- owl slider -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
-  <!-- custom js -->
-  <script type="text/javascript" src="js/custom.js"></script>
-  <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
-  </script>
-  <!-- End Google Map -->
+    <div class="sp-divider"></div>
 
+    <!-- ========================================
+         CATÉGORIE 3 — HASLER GROUP (Stage BTS)
+    ========================================= -->
+    <div class="cat-section">
+      <div class="cat-label cat-hasler sp-animate">
+        <i class='bx bx-building-house'></i> Stage BTS SIO — HASLER Group (Entreprise)
+      </div>
+
+      <!-- Stage 1 — Table SCM3 -->
+      <div class="proj-card sp-animate">
+        <div class="proj-img">
+          <img src="images/table.png" alt="Logiciel VisuaLLink — Table de communication SCM3">
+        </div>
+        <div class="proj-body">
+          <h3>Logiciel VisuaLLink <span class="accent">·</span> Stage 1 — Table Communication SCM3</h3>
+          <p>
+            Premier stage BTS chez <strong>HASLER Group</strong> (leader mondial de l'ingénierie de dosage industriel).
+            Développement du logiciel <strong>VisuaLLink</strong> avec WinDev pour générer automatiquement
+            une table d'échange entre le contrôleur <strong>SCM3</strong> et le logiciel de supervision du client.
+          </p>
+          <p>
+            Le logiciel comprend une base de données de tous les paramètres, triés par type de machine,
+            permettant d'importer, de modifier et d'exporter des tables en fichier interprétable par le SCM3.
+            Intégration d'une communication via le protocole <strong>Modbus TCP/IP</strong>.
+          </p>
+          <div class="proj-footer">
+            <a href="projet-hasler-1.html" class="sp-article-link"><i class='bx bx-link-external'></i> Voir le
+              détail</a>
+            <div class="proj-tool-imgs">
+              <img src="images/Windev26.png" alt="WinDev" title="WinDev 26">
+              <img src="images/LOGO-HASLER-GROUP-SIGNATURE-PANTONE.png" alt="HASLER Group" title="HASLER Group"
+                style="filter:brightness(1.5); height:28px; width:auto">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stage 2 — Excel PSF -->
+      <div class="proj-card sp-animate">
+        <div class="proj-img">
+          <img src="images/PSF.png" alt="Conversion Excel → Fichier PSF — HASLER Group">
+        </div>
+        <div class="proj-body">
+          <h3>Conversion Excel → PSF <span class="accent">·</span> Stage 2 — HASLER Group</h3>
+          <p>
+            Deuxième stage BTS chez HASLER Group. Mission principale : créer des tableaux <strong>Excel</strong>
+            regroupant les paramètres et leurs valeurs pour chaque fonctionnalité, avec conversion automatique
+            vers un <strong>fichier PSF</strong> interprétable par le SCM3.
+          </p>
+          <p>
+            Mission complémentaire : vérifier la gestion simultanée de plusieurs PDU via
+            <strong>BlueStacks</strong> grâce à un script personnalisé.
+          </p>
+          <div class="proj-footer">
+            <a href="projet-hasler-2.html" class="sp-article-link"><i class='bx bx-link-external'></i> Voir le
+              détail</a>
+            <div class="proj-tool-imgs">
+              <img src="images/Microsoft_Office_Excel_(2019–present).svg.png" alt="Excel" title="Microsoft Excel">
+              <img src="images/Windev26.png" alt="WinDev" title="WinDev 26">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="sp-footer">
+    <div class="sp-footer-links">
+      <a href="index.html">Accueil</a>
+      <a href="Moi.html">À Propos</a>
+      <a href="Projet.html">Projets</a>
+      <a href="stage.html">Stage BTS</a>
+      <a href="Veille.html">Veille Techno</a>
+      <a href="Curriculum vitae.html">CV</a>
+    </div>
+    <p class="sp-footer-copy">© <span id="current-year"></span> Matéo Ramet — Junior Level &amp; Game Designer</p>
+    <a href="#" class="sp-footer-top"><i class='bx bx-up-arrow-alt'></i></a>
+  </footer>
+
+  <script src="js/subpage.js"></script>
 </body>
 
 </html>

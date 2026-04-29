@@ -1,213 +1,162 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <link rel="shortcut icon" href="images/favicon.png" type="">
-
-  <title>CV</title>
-
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-
-  <!-- Fonts style -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-
-  <!-- Owl slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-
-  <!-- Font Awesome style -->
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
-
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- Responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum Vitae | Matéo Ramet — Game Designer</title>
+  <meta name="description" content="Curriculum vitae de Matéo Ramet, Junior Level & Game Designer. Licence Gamagora Lyon.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/subpage.css">
+  <style>
+    .cv-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+    .cv-frame {
+      width: 100%;
+      max-width: 850px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      position: relative;
+    }
+    .cv-frame::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--cyan));
+    }
+    .cv-frame img {
+      width: 100%;
+      display: block;
+      border-radius: 0;
+    }
+    .cv-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .cv-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.75rem;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.03em;
+      transition: var(--transition);
+      cursor: pointer;
+      border: none;
+    }
+    .cv-btn-primary {
+      background: var(--accent);
+      color: #fff;
+      border: 2px solid var(--accent);
+    }
+    .cv-btn-primary:hover {
+      background: var(--accent-light);
+      border-color: var(--accent-light);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(124,58,237,0.4);
+    }
+    .cv-btn-outline {
+      background: transparent;
+      color: var(--accent-light);
+      border: 2px solid rgba(124,58,237,0.5);
+    }
+    .cv-btn-outline:hover {
+      border-color: var(--accent-light);
+      background: rgba(124,58,237,0.1);
+      transform: translateY(-2px);
+    }
+    @media print {
+      .sp-header, .sp-footer, .cv-actions, .page-banner, .sp-back-btn { display: none !important; }
+      body { background: white; }
+      .cv-frame { border: none; box-shadow: none; }
+    }
+  </style>
 </head>
+<body>
 
-<body class="sub_page">
-
-  <div class="hero_area">
-
-    <div class="hero_bg_box">
-      <div class="bg_img_box">
-        <img src="images/hero-bg.png" alt="">
-      </div>
-    </div>
-
-   <!-- header section strats -->
-<header class="header_section">
-  <div class="container-fluid">
-    <nav class="navbar navbar-expand-lg custom_nav-container ">
-      <a class="navbar-brand" href="index.html">
-        <span>
-          Portfolio
-        </span>
-      </a>
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class=""> </span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav  ">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="stage.html">Stages</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Projet.html">Projet</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Veille.html">Veille Technologique</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Curriculum vitae.html">Curriculum vitae</a>
-          </li>
-          </form>
-        </ul>
-      </div>
+  <!-- Header -->
+  <header class="sp-header">
+    <a href="index.html" class="sp-logo">Matéo<span>.</span></a>
+    <i class="bx bx-menu sp-menu-btn" id="sp-menu-btn"></i>
+    <nav class="sp-nav" id="sp-nav">
+      <a href="index.html">Accueil</a>
+      <a href="Moi.html">À Propos</a>
+      <a href="Projet.html">Projets</a>
+      <a href="stage.html">Stage BTS</a>
+      <a href="Veille.html">Veille Techno</a>
+      <a href="Curriculum vitae.html" class="active">Curriculum Vitae</a>
     </nav>
-  </div>
-</header>
-<!-- end header section -->
+  </header>
 
-    <!-- CV section -->
-<section class="team_section layout_padding">
-  <div class="container-fluid">
-    <div class="heading_container heading_center">
-      <h2>Mon <span>Curriculum vitae</span></h2>
-      <!-- Ajout d'un saut de ligne -->
-      <br>
-    </div>
-    <!-- CV -->
-    <article id="CV" class="text-center">
-      <span class="image main image_center"><img src="images/CV-1.png" alt="Ma photo" width="" height="1000" /></span>
-      <br>
-        
-      <!-- Conteneur pour centrer le bouton -->
-      <div class="center-button">
-        <!-- Bouton pour imprimer l'image -->
-        <button id="imprimerImage" onclick="imprimerImage()">Imprimer le CV</button>
-      </div>
-      
-      <!-- Ajout d'un saut de ligne -->
-      <br>
-      
-      <li class="center-button">
-        <a href="#"></a>
-      </li>
-    </article>
-    <!-- End CV -->
+  <!-- Banner -->
+  <div class="page-banner">
+    <p class="page-banner-breadcrumb">
+      <a href="index.html">Accueil</a>
+      <span>/</span> Curriculum Vitae
+    </p>
+    <h1>Mon <span class="accent">Curriculum Vitae</span></h1>
+    <p>Junior Level &amp; Game Designer — Gamagora Lyon</p>
   </div>
-</section>
-        <!-- info section -->
 
-<section class="info_section layout_padding2">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-lg-3 info_col">
-        <div class="info_contact">
-          <h4>
-            Address
-          </h4>
-          <div class="contact_link_box">  
-            </a>
-            <a href="">
-              <i class="fa fa-phone" aria-hidden="true"></i>
-              <span>
-               +07 83 66 54 72  
-              </span>
-            </a>
-            <a href="">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-              <span>
-                rametmateo@gmail.com
-              </span> 
-            </a>
-          </div>
-        </div>
-        <div class="info_social">
-          <a href="https://www.linkedin.com/in/matéo-ramet-037a4128b/">
-            <i class="fa fa-linkedin" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.instagram.com/mateo.rt_duke/?next=%2F">
-            <i class="fa fa-instagram" aria-hidden="true"></i>
-          </a>
-        </div>
+  <!-- Main -->
+  <main class="sp-main">
+    <a href="index.html" class="sp-back-btn">
+      <i class='bx bx-arrow-back'></i> Retour au portfolio
+    </a>
+
+    <div class="cv-wrapper">
+      <div class="cv-actions sp-animate">
+        <a href="images/CV.png" download class="cv-btn cv-btn-primary">
+          <i class='bx bx-download'></i> Télécharger le CV
+        </a>
+        <button class="cv-btn cv-btn-outline" onclick="window.print()">
+          <i class='bx bx-printer'></i> Imprimer
+        </button>
+        <a href="images/CV.png" target="_blank" rel="noopener" class="cv-btn cv-btn-outline">
+          <i class='bx bx-expand-alt'></i> Plein écran
+        </a>
       </div>
-      <div class="col-md-6 col-lg-3 info_col">
+
+      <div class="cv-frame sp-animate">
+        <img src="images/CV.png" alt="Curriculum Vitae de Matéo Ramet — Junior Level & Game Designer">
       </div>
-      <div class="col-md-6 col-lg-2 mx-auto info_col">
-        <div class="info_link_box">
-          <h4>
-            Links
-          </h4>
-          <div class="info_links">
-            <a class="active" href="index.html">
-              Home
-            </a>
-            <a class="" href="stage.html">
-              Stages
-            </a>
-            <a class="" href="Projet.html">
-              Projet
-            </a>
-            <a class="" href="Veille.html">
-              Veille Technologique
-            </a>
-            <a class="" href="Curriculum vitae.html">
-              Curriculum vitae
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3 info_col ">
+
+      <div class="cv-actions sp-animate">
+        <a href="images/CV.png" download class="cv-btn cv-btn-primary">
+          <i class='bx bx-download'></i> Télécharger le CV
+        </a>
       </div>
     </div>
-  </div>
-</section>
+  </main>
 
-<!-- end info section -->
-      </div>
-    </section>
+  <!-- Footer -->
+  <footer class="sp-footer">
+    <div class="sp-footer-links">
+      <a href="index.html">Accueil</a>
+      <a href="Moi.html">À Propos</a>
+      <a href="Projet.html">Projets</a>
+      <a href="stage.html">Stage BTS</a>
+      <a href="Veille.html">Veille Techno</a>
+      <a href="Curriculum vitae.html">CV</a>
+    </div>
+    <p class="sp-footer-copy">© <span id="current-year"></span> Matéo Ramet — Junior Level &amp; Game Designer</p>
+    <a href="#" class="sp-footer-top"><i class='bx bx-up-arrow-alt'></i></a>
+  </footer>
 
-    <!-- Your content below the CV -->
-    <!-- ... (your existing code) ... -->
-
-    <!-- footer section -->
-    <section class="footer_section">
-      <div class="container">
-        <p>
-          <span id="displayYear"></span> © PortFolio RAMET Matéo 2023-2024.
-        </p>
-      </div>
-    </section>
-    <!-- end footer section -->
-
-    <!-- jQuery -->
-    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-    <!-- popper js -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <!-- bootstrap js -->
-    <script type="text/javascript" src="js/bootstrap.js"></script>
-    <!-- owl slider -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <!-- custom js -->
-    <script type="text/javascript" src="js/custom.js"></script>
-    <!-- Google Map -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
-    <!-- End Google Map -->
-
-  </body>
+  <script src="js/subpage.js"></script>
+</body>
 </html>

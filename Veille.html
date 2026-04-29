@@ -1,281 +1,188 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="fr">
 <head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <link rel="shortcut icon" href="images/favicon.png" type="">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veille Technologique | Matéo Ramet — Game Designer</title>
+  <meta name="description" content="Veille technologique de Matéo Ramet sur Unreal Engine — actualités, tutoriels et communautés.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/subpage.css">
+  <style>
+    .ue-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+    .ue-intro-img {
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      height: 260px;
+      object-fit: cover;
+      width: 100%;
+    }
+    .ue-intro-text h3 {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      margin-bottom: 0.85rem;
+    }
+    .ue-intro-text p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.75;
+    }
 
-  <title> Veille Technologique </title>
+    .tool-banner {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: rgba(124,58,237,0.08);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 1rem 1.5rem;
+      margin-bottom: 2.5rem;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+    .tool-banner i { color: var(--accent-light); font-size: 1.3rem; }
+    .tool-banner strong { color: var(--accent-light); }
 
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-
-  <!--owl slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-
-  <!-- font awesome style -->
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
-
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="css/Footer.css" media="all">
-  <link rel="stylesheet" type="text/css" href="css/Veille_technologique.css" media="all">
-
+    @media (max-width: 700px) {
+      .ue-intro { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
+<body>
 
-<body class="sub_page">
-
-  <div class="hero_area">
-
-    <div class="hero_bg_box">
-      <div class="bg_img_box">
-        <img src="images/hero-bg.png" alt="">
-      </div>
-    </div>
-
-<!-- header section strats -->
-<header class="header_section">
-  <div class="container-fluid">
-    <nav class="navbar navbar-expand-lg custom_nav-container ">
-      <a class="navbar-brand" href="index.html">
-        <span>
-          Portfolio
-        </span>
-      </a>
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class=""> </span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav  ">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="stage.html">Stages</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Projet.html">Projet</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Veille.html">Veille Technologique</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Curriculum vitae.html">Curriculum vitae</a>
-          </li>
-          </form>
-        </ul>
-      </div>
+  <!-- Header -->
+  <header class="sp-header">
+    <a href="index.html" class="sp-logo">Matéo<span>.</span></a>
+    <i class="bx bx-menu sp-menu-btn" id="sp-menu-btn"></i>
+    <nav class="sp-nav" id="sp-nav">
+      <a href="index.html">Accueil</a>
+      <a href="Moi.html">À Propos</a>
+      <a href="Projet.html">Projets</a>
+      <a href="stage.html">Stage BTS</a>
+      <a href="Veille.html" class="active">Veille Techno</a>
+      <a href="Curriculum vitae.html">Curriculum Vitae</a>
     </nav>
-  </div>
-</header>
-<!-- end header section -->
-  <!--<section class="Veille">-->
-    <section class="Titre">
-      <h1 class="Titre_pro">Veille Technologique</h1>
-      <hr id="hr1">
-  </section>
+  </header>
 
-
-<section class="description_veille" id="description_veille">
-  <br>
-  <h2 class="titres"> <strong> Ma veille technologique et mes outils </strong> </h2>
-  <p>
-      Pour effectuer ma veille technologique, j’utilise « Google Alertes « , qui me crée des alertes toutes les
-      semaines. <br>
-      Celui-ci me permet d’être toujours au courant de toutes les actualités que je souhaite.<br>
-      
-  </p>
-  <p>Pour ma veille technologique j'ai choisi <strong>Unreal Engine</strong></p>
-  <br><br>
-  <hr id="hr2">
-  <h2 id="block">  <strong> Unreal Engine c’est quoi ? </strong> </h2>
-  <p id="chain">Unreal Engine est un moteur de jeu développé par Epic Games. <br>
-    Il est largement utilisé dans l'industrie du jeu vidéo pour créer des jeux sur différentes plateformes, notamment PC, consoles, et dispositifs mobiles. <br>
-    Unreal Engine offre une gamme d'outils puissants pour la création de jeux, y compris des fonctionnalités de rendu avancées, des outils de développement visuel, une physique réaliste, des outils d'animation, et bien plus encore. 
-    De nombreux jeux populaires ont été développés avec Unreal Engine, tels que Fortnite, Gears of War
+  <!-- Banner -->
+  <div class="page-banner">
+    <p class="page-banner-breadcrumb">
+      <a href="index.html">Accueil</a><span>/</span> Veille Technologique
     </p>
-  <br><br>
-  <!-- Titre Articles -->
-<section>
-  <hr id="hr2">
-  <h2 id="block"> <strong> Mes sources </strong> </h2>
-</section>
-</section>
- <div>
-      <main class="grid">
-
-              <article>
-          <img src="images/UE5.jpg" alt="image_article">
-          <div class="text">
-              <h3>L'actualité,<br>Site officiel  </h3> <br>
-              <p>Annonces de mises à jour : Unreal Engine est constamment mis à jour avec de nouvelles fonctionnalités, améliorations et correctifs. Cette section pourrait annoncer les dernières mises à jour du moteur, en mettant en évidence les nouvelles fonctionnalités et les changements apportés.</p> <br>
-              <hr>
-              
-              <hr>
-              <a href=https://www.unrealengine.com/fr/feed class="btn btn-primary btn-block" target="_blank" rel="noreferrer">Plus d'informations</a>
-          </div>
-      </article>
-      
-              <article>
-          <img src="images/youtube-logo-2017-743.png" alt="image_article">
-          <div class="text">
-              <h3>Chaîne Youtube</h3> <br>
-              <p>Tutoriels : La chaîne propose souvent des tutoriels vidéo sur divers aspects de l'utilisation d'Unreal Engine, couvrant des sujets tels que la création de niveaux, la programmation avec Blueprints, l'animation, l'éclairage, les effets spéciaux, etc.<br>
-
-                Aperçus de fonctionnalités : Lorsque de nouvelles fonctionnalités sont ajoutées à Unreal Engine, la chaîne YouTube peut publier des vidéos présentant ces fonctionnalités en action, montrant comment elles peuvent être utilisées dans des projets de jeu.</p> <br>
-              <hr>
-              
-              <hr>
-              <a href=https://www.youtube.com/@UnrealEngine/videos class="btn btn-primary btn-block" target="_blank" rel="noreferrer">Plus d'informations</a>
-          </div>
-      </article>
-      
-              <article>
-          <img src="images/discord-guide-app-image-1-600x315.png" alt="image_article">
-          <div class="text">
-              <h3>Communautés </h3> <br>
-              <p>Un espace pour poser des questions, partager des projets, trouver des collaborateurs, et discuter des dernières actualités et des meilleures pratiques liées au développement de jeux avec Unreal Engine.</p> <br>
-              <hr>
-              
-              <hr>
-              <a href=https://discord.com/invite/unreal-engine-978033435895562280 class="btn btn-primary btn-block" target="_blank" rel="noreferrer">Plus d'informations</a>
-          </div>
-      </article>
-      
-              
-         
-      
-          </main>
-</div>
-
-
-
-<!-- Scroll Up -->
-<script src="js/Scroll_Up.js"></script>
-<button onclick="topFunction()" id="myBtn" title="Go to top"></button>
-
-<!-- Footer -->
-
-
-
-<!----Custom JS File--->
-<script src="js/Header.js"></script>
-<script src="js/MessageRetour.js"></script>
-</body>
-
-</html>
-<!-- info section -->
-
-<section class="info_section layout_padding2">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-lg-3 info_col">
-        <div class="info_contact">
-          <h4>
-            Address
-          </h4>
-          <div class="contact_link_box">  
-            </a>
-            <a href="">
-              <i class="fa fa-phone" aria-hidden="true"></i>
-              <span>
-               +07 83 66 54 72
-              </span>
-            </a>
-            <a href="">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-              <span>
-                rametmateo@gmail.com
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="info_social">
-          <a href="https://www.linkedin.com/in/matéo-ramet-037a4128b/">
-            <i class="fa fa-linkedin" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.instagram.com/mateo.rt_duke/?next=%2F">
-            <i class="fa fa-instagram" aria-hidden="true"></i>
-          </a>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3 info_col">
-      </div>
-      <div class="col-md-6 col-lg-2 mx-auto info_col">
-        <div class="info_link_box">
-          <h4>
-            Links
-          </h4>
-          <div class="info_links">
-            <a class="active" href="index.html">
-              Home
-            </a>
-            <a class="" href="stage.html">
-              Stages
-            </a>
-            <a class="" href="Projet.html">
-              Projet
-            </a>
-            <a class="" href="Veille.html">
-              Veille Technologique
-            </a>
-            <a class="" href="Curriculum vitae.html">
-              Curriculum vitae
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3 info_col ">
-      </div>
-    </div>
+    <h1>Veille <span class="accent">Technologique</span></h1>
+    <p>Suivi des évolutions d'Unreal Engine — mon moteur de jeu de prédilection</p>
   </div>
-</section>
 
-<!-- end info section -->
+  <!-- Main -->
+  <main class="sp-main">
+    <a href="index.html" class="sp-back-btn"><i class='bx bx-arrow-back'></i> Retour au portfolio</a>
 
-  <!-- footer section -->
-  <section class="footer_section">
-    <div class="container">
-      <p>
-         <span id="displayYear"></span> © PortFolio RAMET Matéo 2023-2024. 
-        
-      </p>
+    <!-- Outil de veille -->
+    <div class="tool-banner sp-animate">
+      <i class='bx bx-bell'></i>
+      <p>Outil de veille : <strong>Google Alertes</strong> — alertes hebdomadaires pour rester informé de toutes les actualités autour d'<strong>Unreal Engine</strong>.</p>
     </div>
-  </section>
-  <!-- footer section -->
 
-  <!-- jQery -->
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <!-- popper js -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
-  <!-- bootstrap js -->
-  <script type="text/javascript" src="js/bootstrap.js"></script>
-  <!-- owl slider -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
-  <!-- custom js -->
-  <script type="text/javascript" src="js/custom.js"></script>
-  <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
-  </script>
-  <!-- End Google Map -->
+    <!-- Présentation UE -->
+    <h2 class="sp-heading sp-animate">Unreal Engine — <span class="accent">C'est quoi ?</span></h2>
+    <div class="ue-intro sp-animate">
+      <img src="images/UE5.jpg" alt="Unreal Engine 5 — screenshot" class="ue-intro-img">
+      <div class="ue-intro-text">
+        <h3>Le moteur des <span class="accent">AAA</span></h3>
+        <p>Unreal Engine est un moteur de jeu développé par <strong>Epic Games</strong>. Il est largement utilisé dans l'industrie du jeu vidéo pour créer des jeux sur toutes les plateformes : PC, consoles, mobile et XR.</p>
+        <p style="margin-top:0.75rem">Unreal Engine offre des outils de rendu avancés (Lumen, Nanite), des systèmes de physique réaliste, des outils d'animation et un système de scripting visuel puissant : <strong>Blueprints</strong>.</p>
+        <p style="margin-top:0.75rem">Jeux populaires : <strong>Fortnite</strong>, Gears of War, Star Wars Jedi: Survivor, et bien d'autres.</p>
+        <div style="margin-top:1rem">
+          <span class="sp-tag">UE5</span>
+          <span class="sp-tag">Lumen</span>
+          <span class="sp-tag">Nanite</span>
+          <span class="sp-tag">Blueprints</span>
+          <span class="sp-tag">Epic Games</span>
+        </div>
+      </div>
+    </div>
 
+    <div class="sp-divider"></div>
+
+    <!-- Sources -->
+    <h2 class="sp-heading sp-animate">Mes <span class="accent">Sources</span></h2>
+
+    <div class="sp-grid sp-animate">
+      <!-- Source 1 - Site officiel -->
+      <div class="sp-article-card">
+        <div class="sp-article-img">
+          <img src="images/UE5.jpg" alt="Site officiel Unreal Engine">
+        </div>
+        <div class="sp-article-body">
+          <h3>Site Officiel — Actualités</h3>
+          <p>Annonces des mises à jour, nouvelles fonctionnalités, correctifs et actualités du moteur. La source la plus fiable pour suivre l'évolution d'Unreal Engine.</p>
+          <div class="sp-article-footer">
+            <span class="sp-tag">Officiel</span>
+            <a href="https://www.unrealengine.com/fr/feed" target="_blank" rel="noopener" class="sp-article-link">
+              <i class='bx bx-link-external'></i> Voir
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Source 2 - YouTube -->
+      <div class="sp-article-card">
+        <div class="sp-article-img">
+          <img src="images/youtube-logo-2017-743.png" alt="Chaîne YouTube Unreal Engine" style="object-fit:contain; background:#0a0a0f; padding:2rem">
+        </div>
+        <div class="sp-article-body">
+          <h3>Chaîne YouTube Officielle</h3>
+          <p>Tutoriels vidéo sur la création de niveaux, la programmation avec Blueprints, l'animation, l'éclairage et les aperçus des nouvelles fonctionnalités.</p>
+          <div class="sp-article-footer">
+            <span class="sp-tag">Tutoriels</span>
+            <a href="https://www.youtube.com/@UnrealEngine/videos" target="_blank" rel="noopener" class="sp-article-link">
+              <i class='bx bx-link-external'></i> Voir
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Source 3 - Discord -->
+      <div class="sp-article-card">
+        <div class="sp-article-img">
+          <img src="images/discord-guide-app-image-1-600x315.png" alt="Discord Unreal Engine" style="object-fit:contain; background:#5865F2; padding:2rem">
+        </div>
+        <div class="sp-article-body">
+          <h3>Communauté Discord</h3>
+          <p>Espace de discussion pour poser des questions, partager des projets, trouver des collaborateurs et rester au courant des meilleures pratiques de la communauté.</p>
+          <div class="sp-article-footer">
+            <span class="sp-tag">Communauté</span>
+            <a href="https://discord.com/invite/unreal-engine-978033435895562280" target="_blank" rel="noopener" class="sp-article-link">
+              <i class='bx bx-link-external'></i> Rejoindre
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="sp-footer">
+    <div class="sp-footer-links">
+      <a href="index.html">Accueil</a>
+      <a href="Moi.html">À Propos</a>
+      <a href="Projet.html">Projets</a>
+      <a href="stage.html">Stage BTS</a>
+      <a href="Veille.html">Veille Techno</a>
+      <a href="Curriculum vitae.html">CV</a>
+    </div>
+    <p class="sp-footer-copy">© <span id="current-year"></span> Matéo Ramet — Junior Level &amp; Game Designer</p>
+    <a href="#" class="sp-footer-top"><i class='bx bx-up-arrow-alt'></i></a>
+  </footer>
+
+  <script src="js/subpage.js"></script>
 </body>
-
 </html>
