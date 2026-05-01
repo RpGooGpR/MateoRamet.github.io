@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>À Propos | Matéo Ramet — Game Designer</title>
-  <meta name="description" content="Parcours scolaire, certifications et informations sur Matéo Ramet, Junior Level & Game Designer à Gamagora Lyon.">
+  <meta name="description"
+    content="Parcours scolaire, certifications et informations sur Matéo Ramet, Junior Level & Game Designer à Gamagora Lyon.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/subpage.css">
   <style>
@@ -18,7 +22,11 @@
       align-items: start;
       margin-bottom: 4rem;
     }
-    .moi-photo-wrap { position: relative; }
+
+    .moi-photo-wrap {
+      position: relative;
+    }
+
     .moi-photo {
       width: 240px;
       height: 240px;
@@ -29,19 +37,38 @@
       margin: 0 auto;
       display: block;
     }
+
     .moi-photo-ring {
       position: absolute;
-      top: -12px; left: 50%;
+      top: -12px;
+      left: 50%;
       transform: translateX(-50%);
-      width: 264px; height: 264px;
+      width: 264px;
+      height: 264px;
       border-radius: 50%;
-      border: 2px dashed rgba(124,58,237,0.4);
+      border: 2px dashed rgba(124, 58, 237, 0.4);
       animation: spin 10s linear infinite;
     }
-    @keyframes spin { to { transform: translateX(-50%) rotate(360deg); } }
 
-    .moi-bio h2 { font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 1rem; font-weight: 700; }
-    .moi-bio p { color: var(--text-secondary); line-height: 1.75; margin-bottom: 0.85rem; font-size: 0.93rem; }
+    @keyframes spin {
+      to {
+        transform: translateX(-50%) rotate(360deg);
+      }
+    }
+
+    .moi-bio h2 {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .moi-bio p {
+      color: var(--text-secondary);
+      line-height: 1.75;
+      margin-bottom: 0.85rem;
+      font-size: 0.93rem;
+    }
 
     .interests-row {
       display: grid;
@@ -49,6 +76,7 @@
       gap: 1rem;
       margin-top: 1.5rem;
     }
+
     .interest-pill {
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -61,7 +89,12 @@
       color: var(--text-secondary);
       transition: var(--transition);
     }
-    .interest-pill i { color: var(--accent-light); font-size: 1.1rem; }
+
+    .interest-pill i {
+      color: var(--accent-light);
+      font-size: 1.1rem;
+    }
+
     .interest-pill:hover {
       border-color: var(--border-hover);
       color: var(--text-primary);
@@ -77,10 +110,32 @@
       padding: 1.5rem 2rem;
       transition: var(--transition);
     }
-    .cert-card:hover { border-color: var(--border-hover); box-shadow: var(--shadow-glow); }
-    .cert-logo { width: 70px; height: 70px; object-fit: contain; flex-shrink: 0; }
-    .cert-info h4 { font-size: 1rem; font-weight: 600; margin-bottom: 0.4rem; }
-    .cert-info p { font-size: 0.855rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 0.75rem; }
+
+    .cert-card:hover {
+      border-color: var(--border-hover);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .cert-logo {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .cert-info h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .cert-info p {
+      font-size: 0.855rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 0.75rem;
+    }
+
     .cert-link {
       display: inline-flex;
       align-items: center;
@@ -88,19 +143,24 @@
       font-size: 0.8rem;
       font-weight: 600;
       color: var(--cyan);
-      border: 1px solid rgba(6,182,212,0.3);
+      border: 1px solid rgba(6, 182, 212, 0.3);
       padding: 0.3rem 0.8rem;
       border-radius: 100px;
       transition: var(--transition);
     }
-    .cert-link:hover { background: rgba(6,182,212,0.1); border-color: var(--cyan); }
+
+    .cert-link:hover {
+      background: rgba(6, 182, 212, 0.1);
+      border-color: var(--cyan);
+    }
 
     .photos-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 1rem;
       margin-top: 1rem;
     }
+
     .photos-grid img {
       width: 100%;
       height: 200px;
@@ -109,6 +169,7 @@
       border: 1px solid var(--border);
       transition: var(--transition);
     }
+
     .photos-grid img:hover {
       border-color: var(--border-hover);
       transform: scale(1.02);
@@ -116,14 +177,25 @@
     }
 
     @media (max-width: 800px) {
-      .moi-grid { grid-template-columns: 1fr; gap: 2rem; text-align: center; }
-      .photos-grid { grid-template-columns: 1fr 1fr; }
+      .moi-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+      }
+
+      .photos-grid {
+        grid-template-columns: 1fr 1fr;
+      }
     }
+
     @media (max-width: 480px) {
-      .photos-grid { grid-template-columns: 1fr; }
+      .photos-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- Header -->
@@ -164,11 +236,14 @@
       </div>
       <div class="moi-bio">
         <h2>Junior Level &amp; <span class="accent">Game Designer</span></h2>
-        <p>Passionné par le Game Design, je viens de terminer un stage dans un studio durant lequel j'ai travaillé sur un <strong>jeu de racing</strong> et j'ai pu approfondir mes compétences dans ce domaine.</p>
-        <p>Je suis très motivé à continuer d'apprendre et d'évoluer dans ce milieu créatif et technique. Mon objectif est de créer des expériences ludiques qui engagent, challengent et immergent les joueurs.</p>
+        <p>Passionné par le Game Design, je viens de terminer un stage dans un studio durant lequel j'ai travaillé sur
+          un <strong>jeu de racing</strong> et j'ai pu approfondir mes compétences dans ce domaine.</p>
+        <p>Je suis très motivé à continuer d'apprendre et d'évoluer dans ce milieu créatif et technique. Mon objectif
+          est de créer des expériences ludiques qui engagent, challengent et immergent les joueurs.</p>
         <div style="margin-top:1.5rem">
           <div class="sp-info-item"><i class='bx bx-map'></i> Région Rhône-Alpes</div>
-          <div class="sp-info-item"><i class='bx bx-envelope'></i> <a href="mailto:rametmateo@gmail.com">rametmateo@gmail.com</a></div>
+          <div class="sp-info-item"><i class='bx bx-envelope'></i> <a
+              href="mailto:rametmateo@gmail.com">rametmateo@gmail.com</a></div>
           <div class="sp-info-item"><i class='bx bx-car'></i> Permis B</div>
           <div class="sp-info-item"><i class='bx bx-graduation'></i> Gamagora / Lyon — Licence Level Design</div>
         </div>
@@ -182,7 +257,7 @@
       <div class="interest-pill"><i class='bx bxs-car'></i> Karting en loisir</div>
       <div class="interest-pill"><i class='bx bx-tv'></i> Séries &amp; Animés</div>
       <div class="interest-pill"><i class='bx bx-cycling'></i> Moto</div>
-      <div class="interest-pill"><i class='bx bx-trophy'></i> Sport Automobile</div>
+      <div class="interest-pill"><i class='bx bx-trophy'></i> Sport Mécanique</div>
     </div>
 
     <!-- Galerie photos loisirs -->
@@ -190,6 +265,7 @@
       <img src="images/-motogp-circuit_hd.jpg" alt="MotoGP — passion pour les courses">
       <img src="images/star-wars-ordre-chronologique.webp" alt="Star Wars — passion pour les univers de fiction">
       <img src="images/jeu_video.jpg" alt="Jeux vidéo — passion principale">
+      <img src="images/future gpx cyber formula.png" alt="Future GPX Cyber Formula — passion pour l'animation et la course">
     </div>
 
     <div class="sp-divider"></div>
@@ -203,7 +279,7 @@
           <span class="sp-timeline-year">2024 – 2025</span>
           <h4>Licence Professionnelle Level Design</h4>
           <p>Gamagora / Université Lyon 2<br>
-          Spécialisation dans la conception de niveaux, la narration spatiale et les mécaniques de jeu.</p>
+            Spécialisation dans la conception de niveaux, la narration spatiale et les mécaniques de jeu.</p>
           <span class="sp-tag">Level Design</span>
           <span class="sp-tag">Game Design</span>
           <span class="sp-tag">UE5</span>
@@ -215,7 +291,7 @@
           <span class="sp-timeline-year">2022 – 2024</span>
           <h4>BTS SIO option SLAM</h4>
           <p>Solutions Logicielles et Applications Métiers<br>
-          Lycée Ella Fitzgerald / Vienne (38)</p>
+            Lycée Ella Fitzgerald / Vienne (38)</p>
           <span class="sp-tag">Développement</span>
           <span class="sp-tag">SLAM</span>
         </div>
@@ -226,7 +302,7 @@
           <span class="sp-timeline-year">2021 – 2022</span>
           <h4>Baccalauréat STI2D option SIN</h4>
           <p>Système d'information et numérique<br>
-          Lycée Galilée / Vienne (38)</p>
+            Lycée Galilée / Vienne (38)</p>
           <span class="sp-tag">STI2D</span>
           <span class="sp-tag">SIN</span>
         </div>
@@ -249,7 +325,8 @@
       <img src="images/Pix_logo.svg.png" alt="Logo PIX" class="cert-logo">
       <div class="cert-info">
         <h4>Certification PIX</h4>
-        <p>Service public en ligne d'évaluation et de certification des compétences numériques. Attestation obtenue en 2023.</p>
+        <p>Service public en ligne d'évaluation et de certification des compétences numériques. Attestation obtenue en
+          2023.</p>
         <a href="images/attestation-pix-20231211.pdf" target="_blank" rel="noopener" class="cert-link">
           <i class='bx bx-file'></i> Voir l'attestation
         </a>
@@ -274,4 +351,5 @@
 
   <script src="js/subpage.js"></script>
 </body>
+
 </html>

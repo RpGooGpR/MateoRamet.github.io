@@ -562,12 +562,13 @@ section { padding: 5.5rem 6%; }
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 2rem 1.4rem;
   text-align: center;
   transition: var(--transition);
   cursor: default;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 .interest-card::before {
   content: '';
@@ -576,6 +577,8 @@ section { padding: 5.5rem 6%; }
   background: linear-gradient(135deg, rgba(124, 58, 237, 0.05), transparent);
   opacity: 0;
   transition: opacity 0.35s;
+  pointer-events: none;
+  z-index: 2;
 }
 .interest-card:hover {
   border-color: var(--border-hover);
@@ -583,21 +586,37 @@ section { padding: 5.5rem 6%; }
   box-shadow: var(--shadow-glow);
 }
 .interest-card:hover::before { opacity: 1; }
-.interest-icon {
-  font-size: 2.4rem;
-  color: var(--accent-light);
-  margin-bottom: 0.85rem;
-  display: inline-block;
-  transition: transform 0.35s var(--ease);
+.interest-img {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
 }
-.interest-card:hover .interest-icon { transform: scale(1.15); }
-.interest-card h4 {
+.interest-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease);
+}
+.interest-card:hover .interest-img img {
+  transform: scale(1.08);
+}
+.interest-content {
+  padding: 1.8rem 1.4rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+.interest-content h4 {
   font-size: 0.95rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: var(--text-primary);
 }
-.interest-card p {
+.interest-content p {
   font-size: 0.82rem;
   color: var(--text-secondary);
   line-height: 1.55;

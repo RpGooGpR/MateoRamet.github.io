@@ -1,273 +1,167 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="fr">
 <head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Gourmetise - Détails | Matéo Ramet</title>
+  <meta name="description" content="Aperçu visuel et organisationnel du projet La Gourmetise.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/subpage.css">
 
-  <title> About_me </title>
-
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-
-  <!--owl slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-
-  <!-- font awesome style -->
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
-
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="css/Footer.css" media="all">
-  <link rel="stylesheet" type="text/css" href="css/Réalisation_Pro.css" media="all">
-
+  <style>
+    .gourmetise-gallery {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .gallery-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2.5rem 2rem;
+      margin-bottom: 3rem;
+      text-align: center;
+      transition: var(--transition);
+    }
+    .gallery-item:hover {
+      border-color: var(--border-hover);
+      box-shadow: var(--shadow-glow);
+    }
+    .gallery-item h3 {
+      font-family: var(--font-heading);
+      color: var(--accent-light);
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+    }
+    .gallery-item p {
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+    }
+    .gallery-img-wrap {
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--bg-primary);
+      margin-bottom: 2rem;
+    }
+    .gallery-img-wrap:last-child {
+      margin-bottom: 0;
+    }
+    .gallery-img-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .gallery-img-wrap img:hover {
+      transform: scale(1.02);
+    }
+    .form-img {
+      max-width: 400px !important;
+      margin: 0 auto;
+    }
+    .logo-project {
+      max-width: 250px;
+      margin: 0 auto 3rem;
+      display: block;
+      filter: drop-shadow(0 0 15px rgba(124, 58, 237, 0.4));
+    }
+  </style>
 </head>
+<body>
 
-<body class="sub_page">
-
-  <div class="hero_area">
-
-    <div class="hero_bg_box">
-      <div class="bg_img_box">
-        <img src="images/hero-bg.png" alt="">
-      </div>
-    </div>
-
-<!-- header section strats -->
-<header class="header_section">
-  <div class="container-fluid">
-    <nav class="navbar navbar-expand-lg custom_nav-container ">
-      <a class="navbar-brand" href="index.html">
-        <span>
-          Portfolio
-        </span>
-      </a>
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class=""> </span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav  ">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="stage.html">Stages</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Projet.html">Projet</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Veille.html">Veille Technologique</a>
-          </li>
-          
-          </form>
-        </ul>
-      </div>
+  <!-- Header -->
+  <header class="sp-header">
+    <a href="index.html" class="sp-logo">Matéo<span>.</span></a>
+    <i class="bx bx-menu sp-menu-btn" id="sp-menu-btn"></i>
+    <nav class="sp-nav" id="sp-nav">
+      <a href="index.html">Accueil</a>
+      <a href="Moi.html">À Propos</a>
+      <a href="Projet.html" class="active">Projets</a>
+      <a href="stage.html">Stage BTS</a>
+      <a href="Veille.html">Veille Techno</a>
+      <a href="Curriculum vitae.html">Curriculum Vitae</a>
     </nav>
+  </header>
+
+  <!-- Banner -->
+  <div class="page-banner">
+    <p class="page-banner-breadcrumb">
+      <a href="index.html">Accueil</a><span>/</span>
+      <a href="Projet.html">Projets</a><span>/</span>
+      <a href="projet-gourmetise.html">La Gourmetise</a><span>/</span>
+      Détails
+    </p>
+    <h1>Détails du <span class="accent">Projet</span></h1>
+    <p>La Gourmetise — Aperçu visuel et organisation</p>
   </div>
-</header>
-<!-- end header section -->
 
-  <!-- Projet section -->
-<!-- Bannière de projet pro -->
-<span style="color: white;">
-  <section class="Presentation">
-    <section class="Titre">
-        <h1 class="Titre2"> Réalisations <wbr> Projet BTS <br></h1>
-        <hr class="HRnormal">
-        <h1 class="Titre3">La Gourmetise</h1>
-    </section>
-    <section class="IMG_Etudiant">
-        <img src="images/logo_gourmetise-removebg-preview.png" alt="IMG_Etudiant_Informatique" width="350px">
-    </section>
-  </section>
-</span>
+  <!-- Main Content -->
+  <main class="sp-main">
+    <a href="projet-gourmetise.html" class="sp-back-btn">
+      <i class='bx bx-arrow-back'></i> Retour à la fiche projet
+    </a>
 
+    <img src="images/logo_gourmetise-removebg-preview.png" alt="Logo La Gourmetise" class="logo-project sp-animate">
 
-<!-- Tous les projets -->
-<section class="Projets">
-
-  <!-- Schéma et Organisation -->
-  <section class="Ecole">
-    <article class="Titre_pro">
-      <p>Schéma et Organisation</p>
-    </article>
-
-    <!-- Première image avec lien -->
-    <article class="articles">
-      <a href="" class="liens">
-        <img src="images/schema_structure.png" alt=""width="800" height="600" />
-      </a>
-    </article>
-    
-    <article class="Titre_pro"> 
-      <p>Trello</p>
-    </article>
-
-    <!-- Deuxième image avec lien -->
-    <article class="articles">
-      <a href="" class="liens">
-        <img src="images/trello.png" alt=""width="800" height="600" />
-      </a>
-    </article>
-
-    <br><br>
-  </section>
-
-  <!-- Aperçu -->
-  <section class="Entreprise">
-    <article class="Titre_pro">
-      <p>Aperçu</p>
-    </article>
-
-    <!-- Troisième image avec lien -->
-    <article class="articles">
-      <a href="" class="liens">
-        <img src="images/site_main.png" alt=""width="800" height="600" />
-      </a>
-    </article>
-    
-    <article class="Titre_pro">
-      <p>Formulaire</p>
-    </article>
-
-    <!-- Quatrième image avec lien -->
-    <article class="articles">
-      <a href="" class="liens">
-        <img src="images/formulaire.png" alt=""width="500" height="1000"  />
-      </a>
-    </article>
-
-  </section>
-</section>
-
-
-
-<!-- Scroll Up -->
-<script src="js/Scroll_Up.js"></script>
-<button onclick="topFunction()" id="myBtn" title="Go to top"></button>
-
-<!-- Footer -->
-
-
-
-<!----Custom JS File--->
-<script src="js/Header.js"></script>
-<script src="js/MessageRetour.js"></script>
-</body>
-
-</html>
-<!-- info section -->
-
-<section class="info_section layout_padding2">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-lg-3 info_col">
-        <div class="info_contact">
-          <h4>
-            Address
-          </h4>
-          <div class="contact_link_box">  
-            </a>
-            <a href="">
-              <i class="fa fa-phone" aria-hidden="true"></i>
-              <span>
-               +07 83 66 54 72
-              </span>
-            </a>
-            <a href="">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-              <span>
-                rametmateo@gmail.com
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="info_social">
-          <a href="https://www.linkedin.com/in/matéo-ramet-037a4128b/">
-            <i class="fa fa-linkedin" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.instagram.com/mateo.rt_duke/?next=%2F">
-            <i class="fa fa-instagram" aria-hidden="true"></i>
-          </a>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3 info_col">
-      </div>
-      <div class="col-md-6 col-lg-2 mx-auto info_col">
-        <div class="info_link_box">
-          <h4>
-            Links
-          </h4>
-          <div class="info_links">
-            <a class="active" href="index.html">
-              Home
-            </a>
-            <a class="" href="stage.html">
-              Stages
-            </a>
-            <a class="" href="Projet.html">
-              Projet
-            </a>
-            <a class="" href="Veille.html">
-              Veille Technologique
-            </a>
-            <a class="" href="Curriculum vitae.html">
-              Curriculum vitae
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3 info_col ">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- end info section -->
-
-  <!-- footer section -->
-  <section class="footer_section">
-    <div class="container">
-      <p>
-         <span id="displayYear"></span> © PortFolio RAMET Matéo 2023-2024. 
+    <div class="gourmetise-gallery">
+      
+      <!-- Section Organisation -->
+      <div class="gallery-item sp-animate">
+        <h3><i class='bx bx-sitemap'></i> Schéma et Organisation</h3>
+        <p>Aperçu de la structure de la base de données et de l'organisation des tâches sur Trello.</p>
         
-      </p>
+        <div class="gallery-img-wrap">
+          <img src="images/schema_structure.png" alt="Schéma Structure">
+        </div>
+        <div class="gallery-img-wrap">
+          <img src="images/trello.png" alt="Organisation Trello">
+        </div>
+      </div>
+
+      <!-- Section Site Web -->
+      <div class="gallery-item sp-animate">
+        <h3><i class='bx bx-desktop'></i> Aperçu du Site Web</h3>
+        <p>Interface principale du site internet développé avec Laravel.</p>
+        
+        <div class="gallery-img-wrap">
+          <img src="images/site_main.png" alt="Site Web La Gourmetise">
+        </div>
+      </div>
+
+      <!-- Section Mobile -->
+      <div class="gallery-item sp-animate">
+        <h3><i class='bx bx-mobile-alt'></i> Application Mobile</h3>
+        <p>Aperçu de l'interface de connexion et du formulaire sur l'application Android.</p>
+        
+        <div class="gallery-img-wrap form-img">
+          <img src="images/formulaire.png" alt="Formulaire Application Mobile">
+        </div>
+      </div>
+
     </div>
-  </section>
-  <!-- footer section -->
 
-  <!-- jQery -->
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <!-- popper js -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
-  <!-- bootstrap js -->
-  <script type="text/javascript" src="js/bootstrap.js"></script>
-  <!-- owl slider -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
-  <!-- custom js -->
-  <script type="text/javascript" src="js/custom.js"></script>
-  <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
-  </script>
-  <!-- End Google Map -->
+  </main>
 
+  <!-- Footer -->
+  <footer class="sp-footer">
+    <div class="sp-footer-links">
+      <a href="index.html">Accueil</a>
+      <a href="Moi.html">À Propos</a>
+      <a href="Projet.html">Projets</a>
+      <a href="stage.html">Stage BTS</a>
+      <a href="Veille.html">Veille Techno</a>
+      <a href="Curriculum vitae.html">CV</a>
+    </div>
+    <p class="sp-footer-copy">© <span id="current-year"></span> Matéo Ramet — Junior Level &amp; Game Designer</p>
+    <a href="#" class="sp-footer-top"><i class='bx bx-up-arrow-alt'></i></a>
+  </footer>
+
+  <script src="js/subpage.js"></script>
 </body>
-
 </html>
