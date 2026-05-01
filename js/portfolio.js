@@ -224,29 +224,7 @@
 })();
 
 
-/* =============================================
-   SKILL BAR ANIMATIONS
-   ============================================= */
-(function initSkillBars() {
-  const containers = document.querySelectorAll('.skills-container');
-  if (!containers.length) return;
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.querySelectorAll('.skill-fill').forEach((bar, i) => {
-          const target = bar.dataset.width;
-          setTimeout(() => {
-            bar.style.width = target + '%';
-          }, i * 120 + 200);
-        });
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.3 });
-
-  containers.forEach(c => observer.observe(c));
-})();
 
 
 /* =============================================

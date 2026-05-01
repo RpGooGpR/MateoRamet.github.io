@@ -513,47 +513,41 @@ section { padding: 5.5rem 6%; }
 .skills-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.3rem 4rem;
+  gap: 1.5rem;
   max-width: 950px;
   margin: 0 auto;
 }
+.skill-item {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 1.2rem 1.5rem;
+  transition: var(--transition);
+}
+.skill-item:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.15);
+  transform: translateY(-3px);
+}
 .skill-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.5rem;
-  font-size: 0.875rem;
-  font-weight: 500;
+  margin-bottom: 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
 }
-.skill-name { color: var(--text-primary); }
-.skill-percent {
-  color: var(--accent-light);
-  font-family: var(--font-heading);
-  font-size: 0.78rem;
-  letter-spacing: 0.05em;
+.skill-name { 
+  color: var(--text-primary); 
+  display: flex;
+  align-items: center;
 }
-.skill-bar {
-  height: 5px;
-  background: rgba(255,255,255,0.08);
-  border-radius: 3px;
-  overflow: hidden;
+.skill-name i {
+  font-size: 1.2rem;
 }
-.skill-fill {
-  height: 100%;
-  width: 0;
-  background: linear-gradient(90deg, var(--accent), var(--cyan));
-  border-radius: 3px;
-  transition: width 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  position: relative;
-}
-.skill-fill::after {
-  content: '';
-  position: absolute;
-  right: 0; top: 0; bottom: 0;
-  width: 6px;
-  background: rgba(255,255,255,0.5);
-  border-radius: 50%;
-  filter: blur(2px);
+.skill-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
 }
 
 /* ===== Interests Cards ===== */
